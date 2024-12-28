@@ -1,0 +1,97 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap');
+
+html {
+    font-family: "Kiwi Maru", serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    /* line-height: 1.8; */
+    color: #000;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+img {
+    max-width: 100%;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 48px;
+    border-bottom: 2px solid #000;
+    background-color: #fff;
+}
+.header-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+}
+.header-center{
+    font-size: 1.2rem;
+}
+.header-left{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-content: center;
+    width: 48px;
+    height: 100%;
+    & img{
+        width: 24px;
+        height: auto;
+    }
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    padding-top: 48px;
+    overflow-x: hidden;
+    background-color: antiquewhite;
+}
+
+.homepage-container{
+    width: 100%;
+    min-height: 100vh;
+    padding:  48px 48px 0;
+    /* background-color: antiquewhite; */
+}
+.data-number-box{
+    padding: 20px;
+    & span{
+        font-size: 1.2rem;
+        padding-right: 4px;
+    }
+}
+.selection-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+.mode-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 40px;
+    border: 2px solid #000;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 1.2rem;
+}
