@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap');
 
+/* 全体 */
 html {
     font-family: "Kiwi Maru", serif;
     font-size: 16px;
@@ -17,19 +18,34 @@ body {
     background-color: #fff;
     overflow-x: hidden;
 }
+
 img {
     max-width: 100%;
 }
 
-.header{
+.is-hidden {
+    display: none !important;
+}
+
+.background {
+    /* 方眼紙模様 */
+    background-image: linear-gradient(0deg, transparent calc(100% - 1px), #e0e0e0 calc(100% - 1px)),
+        linear-gradient(90deg, transparent calc(100% - 1px), #e0e0e0 calc(100% - 1px));
+    background-size: 16px 16px;
+    background-repeat: repeat;
+    background-position: center center;
+}
+
+.header {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 48px;
+    height: 56px;
     border-bottom: 2px solid #000;
     background-color: #fff;
 }
-.header-container{
+
+.header-container {
     position: relative;
     display: flex;
     justify-content: center;
@@ -38,60 +54,149 @@ img {
     height: 100%;
 
 }
-.header-center{
+
+.header-center {
     font-size: 1.2rem;
 }
-.header-left{
+
+.header-left {
     position: absolute;
     top: 0;
     left: 0;
     display: grid;
     place-content: center;
-    width: 48px;
+    width: 56px;
     height: 100%;
-    & img{
-        width: 24px;
+
+    & img {
+        width: 28px;
         height: auto;
     }
 }
 
-.main{
+
+/* index.html */
+
+.main {
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 100vh;
-    padding-top: 48px;
-    overflow-x: hidden;
-    background-color: antiquewhite;
+    padding-top: 56px;
 }
 
-.homepage-container{
+.homepage-container {
     width: 100%;
     min-height: 100vh;
-    padding:  48px 48px 0;
-    /* background-color: antiquewhite; */
+    padding: 56px 36px 0;
 }
-.data-number-box{
-    padding: 20px;
-    & span{
+
+.data-number-box {
+    padding: 32px 16px;
+    & span {
         font-size: 1.2rem;
         padding-right: 4px;
     }
 }
-.selection-container{
+
+.selection-container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 32px;
     width: 100%;
 }
-.mode-button{
+
+.mode-button {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     padding: 40px;
     border: 2px solid #000;
-    border-radius: 8px;
+    border-radius: 16px;
     background-color: #fff;
     font-size: 1.2rem;
+    box-shadow: 0 4px rgb(153, 153, 153);
+}
+
+/* mode1.html mode2.html */
+
+.quiz-container {
+    position: relative;
+    width: 90vw;
+    border: 2px solid #000;
+    margin: 0 auto;
+    flex-grow: 1;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.front-wrapper {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+    background-color: #fff;
+}
+
+.back-wrapper {
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+    background-color: #fff;
+}
+
+.words-list {
+    & li {
+        margin: 12px 0;
+    }
+}
+
+.person-box {
+    font-size: 1.4rem;
+}
+
+.next-button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 144px;
+}
+
+.next-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    height: 72px;
+    max-width: 90%;
+    padding: 16px 0;
+    border-radius: 100px;
+    background-color: #fff;
+    border: 2px solid #000;
+    font-size: 1.2rem;
+    box-shadow: 0 4px rgb(153, 153, 153);
+}
+
+.next-button:active {
+    transform: translateY(4px);
+    box-shadow: none;
 }
