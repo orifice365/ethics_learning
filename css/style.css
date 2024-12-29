@@ -39,6 +39,7 @@ img {
 .header {
     position: fixed;
     top: 0;
+    z-index: 999;
     width: 100%;
     height: 56px;
     border-bottom: 2px solid #000;
@@ -115,10 +116,10 @@ img {
     width: 100%;
     padding: 40px;
     border: 2px solid #000;
-    border-radius: 16px;
+    border-radius: 12px;
     background-color: #fff;
     font-size: 1.2rem;
-    box-shadow: 0 4px rgb(153, 153, 153);
+    box-shadow: 0 4px rgba(153, 153, 153, 0.50);
 }
 
 /* mode1.html mode2.html */
@@ -130,7 +131,7 @@ img {
     border: 2px solid #000;
     margin: 0 auto;
     flex-grow: 1;
-    margin: 40px auto;
+    margin: 64px auto;
     background-color: #fff;
     border-radius: 12px;
     overflow: hidden;
@@ -181,16 +182,16 @@ img {
     justify-content: center;
     align-items: flex-start;
     width: 100%;
-    height: 144px;
-    padding-top: 8px;
+    height: 128px;
+    padding-top: 24px;
 }
 
 .next-button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 320px;
-    height: 72px;
+    width: 280px;
+    height: 64px;
     max-width: 90%;
     padding: 16px 0;
     border-radius: 100px;
@@ -208,7 +209,9 @@ img {
 
 
 .person-display{
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 90vw;
     max-width: 600px;
     border: 2px solid #000;
@@ -218,6 +221,7 @@ img {
     border-radius: 12px;
     overflow: hidden;
     background-color: #fff;
+    font-size: 1.6rem;
 }
 
 .option-container{
@@ -225,24 +229,30 @@ img {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    width: 90vw;
+    width: 95vw;
     max-width: 600px;
     height: 320px;
-    padding: 16px 0;
-    padding-top: 0;
+    margin: 0 auto;
     column-gap: 8px;
     row-gap: 0;
 
     & span{
-        padding: 8px 12px;
+        padding: 12px 12px;
         background-color: #fff;
         border: 2px solid #000;
         border-radius: 4px;
         margin: 0;
         box-shadow: 0 4px rgba(153, 153, 153, 0.5);
     }
-    & span:active {
+    .is-pushed {
         transform: translateY(4px);
         box-shadow: none;
     }
+    .is-pushed.correct-option{
+        background-color: rgb(200, 236, 193);
+    }
+    .is-pushed.incorrect-option{
+        background-color: rgb(232, 184, 175);
+    }
+
 }

@@ -31,7 +31,7 @@ async function fetchJsonData(url) {
 // データを取得して格納する関数
 async function enterQuizData() {
     // JSONファイル定義
-    const jsonFileUrl = 'js/person.json';
+    const jsonFileUrl = 'js/selected.json';
     // JSONファイルを取得
     const matchJsonData = await fetchJsonData(jsonFileUrl);
     if (!matchJsonData) {
@@ -39,15 +39,11 @@ async function enterQuizData() {
         return;
     }
 
-    // ランダムにpersonの1つを選ぶ
-    function getRandomPerson(data) {
-        const persons = data.person;
-        const randomIndex = Math.floor(Math.random() * persons.length); // ランダムなインデックスを取得
-        return persons[randomIndex];
-    }
+    // ランダムにpersonを1つ選ぶ
+    const persons = matchJsonData.person;
+    const randomPersonIndex = Math.floor(Math.random() * persons.length);
+    const randomPerson = persons[randomPersonIndex];
 
-    // ランダムに選んだpersonのnameとkeywordsを取得
-    const randomPerson = getRandomPerson(matchJsonData);
     // 名前取得
     const getPersonName = randomPerson.name;
     // キーワード取得
