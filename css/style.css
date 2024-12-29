@@ -87,8 +87,10 @@ img {
 
 .homepage-container {
     width: 100%;
+    max-width: 600px;
     min-height: 100vh;
     padding: 56px 36px 0;
+    margin: 0 auto;
 }
 
 .data-number-box {
@@ -124,6 +126,7 @@ img {
 .quiz-container {
     position: relative;
     width: 90vw;
+    max-width: 600px;
     border: 2px solid #000;
     margin: 0 auto;
     flex-grow: 1;
@@ -179,6 +182,7 @@ img {
     align-items: flex-start;
     width: 100%;
     height: 144px;
+    padding-top: 8px;
 }
 
 .next-button {
@@ -193,10 +197,52 @@ img {
     background-color: #fff;
     border: 2px solid #000;
     font-size: 1.2rem;
-    box-shadow: 0 4px rgb(153, 153, 153);
+    box-shadow: 0 4px rgba(153, 153, 153, 0.5);
 }
 
 .next-button:active {
     transform: translateY(4px);
     box-shadow: none;
+}
+
+
+
+.person-display{
+    position: relative;
+    width: 90vw;
+    max-width: 600px;
+    border: 2px solid #000;
+    margin: 0 auto;
+    flex-grow: 1;
+    margin: 24px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.option-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    max-width: 600px;
+    height: 320px;
+    padding: 16px 0;
+    padding-top: 0;
+    column-gap: 8px;
+    row-gap: 0;
+
+    & span{
+        padding: 8px 12px;
+        background-color: #fff;
+        border: 2px solid #000;
+        border-radius: 4px;
+        margin: 0;
+        box-shadow: 0 4px rgba(153, 153, 153, 0.5);
+    }
+    & span:active {
+        transform: translateY(4px);
+        box-shadow: none;
+    }
 }

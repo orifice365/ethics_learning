@@ -59,7 +59,7 @@ async function enterQuizData() {
     // keywordsを<li>タグにしてwordsContainerに追加
     getPersonKeywords.forEach(keyword => {
         const li = document.createElement('li'); // <li>を作成
-        li.textContent = keyword; // <li>にテキストを設定
+        li.textContent = "◯" + keyword; // <li>にテキストを設定
         wordsContainer.appendChild(li); // wordsContainerに追加
     });
 
