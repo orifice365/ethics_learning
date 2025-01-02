@@ -31,7 +31,7 @@ async function fetchJsonData(url) {
 // データを取得して格納する関数
 async function enterQuizData() {
     // JSONファイル定義
-    const jsonFileUrl = 'js/selected.json';
+    const jsonFileUrl = 'js/person.json';
     // JSONファイルを取得
     const matchJsonData = await fetchJsonData(jsonFileUrl);
     if (!matchJsonData) {

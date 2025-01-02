@@ -123,6 +123,10 @@ img {
     font-size: 1.2rem;
     box-shadow: 0 4px rgba(153, 153, 153, 0.50);
 }
+.mode-button:hover {
+    transform: translateY(4px);
+    box-shadow: none;
+}
 
 /* mode1.html mode2.html */
 
@@ -204,7 +208,7 @@ img {
     box-shadow: 0 4px rgba(153, 153, 153, 0.5);
 }
 
-.next-button:active {
+.next-button:hover {
     transform: translateY(4px);
     box-shadow: none;
 }
